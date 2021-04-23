@@ -1,0 +1,11 @@
+mutation DeleteCartLineAccount(
+  $cartId: Int!
+  $cartLineId: Int!
+  $cartLineAccountId: Int!
+) {
+  deleteCartLineAccount(
+    cartId: $cartId
+    cartLineId: $cartLineId
+    cartLineAccountId: $cartLineAccountId
+  )
+}

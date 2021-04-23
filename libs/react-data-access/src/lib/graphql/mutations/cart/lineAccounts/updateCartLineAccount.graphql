@@ -1,0 +1,18 @@
+mutation UpdateCartLineAccount(
+  $cartId: Int!
+  $cartLineId: Int!
+  $id: Int!
+  $amount: Float!
+) {
+  updateCartLineAccount(
+    cartId: $cartId
+    cartLineId: $cartLineId
+    id: $id
+    amount: $amount
+  ) {
+    id
+    amount
+    accountNumber
+    cartLineId
+  }
+}

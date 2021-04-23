@@ -1,0 +1,42 @@
+{
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "main" },
+  "npmScope": "multi-cart",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "multi-cart": { "tags": [] },
+    "multi-cart-e2e": { "tags": [], "implicitDependencies": ["multi-cart"] },
+    "react-ui": { "tags": [] },
+    "react-shared-components": { "tags": [] },
+    "react-data-access": { "tags": [] },
+    "multi-cart-api": { "tags": [] },
+    "react-ui-e2e": { "tags": [], "implicitDependencies": ["react-ui"] },
+    "react-shared-components-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-shared-components"]
+    },
+    "util": { "tags": [] },
+    "mock-api": { "tags": [] },
+    "api-types": { "tags": [] }
+  }
+}
